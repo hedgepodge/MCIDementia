@@ -32,7 +32,7 @@ sess.run(init)
 
 for i in range(300001):
 	sess.run(train_step, feed_dict={x: trainb, y_: trainby})
-	if i % 100 == 0 :
+	if i % 1000 == 0 :
 		print(sess.run([cross_entropy, accuracy], feed_dict={ x: trainb, y_: trainby }))
 
 print(sess.run(accuracy, feed_dict={ x: testb, y_: testby}))
