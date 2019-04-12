@@ -30,7 +30,7 @@ sess = tf.Session()
 
 sess.run(init)
 
-for i in range(1501):
+for i in range(300001):
 	sess.run(train_step, feed_dict={x: trainb, y_: trainby})
 	if i % 20 == 0 :
 		print(sess.run([cross_entropy, accuracy], feed_dict={ x: trainb, y_: trainby }))
